@@ -1,0 +1,5 @@
+DHT20
+ArduinoHttpClient
+PubSubClient
+ThingsBoard
+ArduinoJson
