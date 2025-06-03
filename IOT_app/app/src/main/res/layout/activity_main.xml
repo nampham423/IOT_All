@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFEBB2"
+        android:padding="16dp">
+
+        <!-- Existing layout elements (ImageViews, TextViews, etc.) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="0"
+                
+                android:src="@drawable/logo" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="244dp"
+            android:layout_weight="35"
+            android:orientation="horizontal">
+            <!-- Temperature Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="246dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="176dp"
+                    android:layout_height="138dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/temperature" />
+
+                <TextView
+                    android:id="@+id/tvTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="28°C"
+                    android:textColor="#E53935"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Temperature"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- Humidity Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="246dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/humidity" />
+
+                <TextView
+                    android:id="@+id/tvHumi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="60%"
+                    android:textColor="#1E88E5"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Humidity"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="244dp"
+            android:layout_weight="35"
+            android:orientation="horizontal">
+            <!-- GDD Section -->
+            <!-- Light Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="246dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="201dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/sunny" />
+
+                <TextView
+                    android:id="@+id/tvLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="500lx"
+                    android:textColor="#D875C7"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Light"
+                    android:gravity="center"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="379dp"
+            android:layout_height="100dp"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtLED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="LED:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.github.angads25.toggle.widget.LabeledSwitch
+                android:id="@+id/btnLed"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:colorBorder="@color/teal_200"
+                app:colorOff="@color/white"
+                app:colorOn="@color/teal_200"
+                app:on="false"
+                app:textOff="OFF"
+                app:textOn="ON" />
+
+            <TextView
+                android:id="@+id/txtFAN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="FAN:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.github.angads25.toggle.widget.LabeledSwitch
+                android:id="@+id/btnFan"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:colorBorder="@color/cardview_dark_background"
+                app:colorOff="@color/white"
+                app:colorOn="@color/black"
+                app:on="false"
+                app:textOff="OFF"
+                app:textOn="ON" />
+
+        </LinearLayout>
+        <!-- Adjusted LinearLayout for the AnyChartView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view_2"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFEBB2"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="History Log:"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/txtHistoryLog"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+        <!-- Add more additional content as needed -->
+</androidx.core.widget.NestedScrollView>
